@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { X, CheckCircle } from "lucide-react"
 import { useState } from "react"
 
@@ -60,6 +60,7 @@ export function BetModal({ open, onOpenChange, prediction, onSubmit }: BetModalP
                   <X className="h-5 w-5" />
                 </button>
               </div>
+              <DialogDescription className="sr-only">予測を確認して送信してください</DialogDescription>
             </DialogHeader>
 
             <div className="space-y-5 p-5">

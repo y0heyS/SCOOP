@@ -59,7 +59,7 @@ export function PastEpisodes() {
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                   <Headphones className="h-6 w-6 text-primary" />
                 </div>
-                <div className="flex-1 min-w-0">
+                <div className="min-w-0 flex-1">
                   <div className="mb-1 flex items-center gap-2">
                     <span className="rounded-full bg-secondary px-2 py-0.5 text-xs font-medium text-secondary-foreground">
                       EP{episode.episode_number}
@@ -73,8 +73,8 @@ export function PastEpisodes() {
                       })}
                     </span>
                   </div>
-                  <h3 className="mb-1 font-semibold text-foreground truncate">{episode.title}</h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2">{episode.description}</p>
+                  <h3 className="mb-1 truncate font-semibold text-foreground">{episode.title}</h3>
+                  <p className="line-clamp-2 text-sm text-muted-foreground">{episode.description}</p>
                 </div>
               </div>
             </Card>

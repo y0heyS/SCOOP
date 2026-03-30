@@ -15,7 +15,7 @@ export function PrivyProviderWrapper({
       config={{
         appearance: {
           theme: "light",
-          accentColor: "#f97316",
+          accentColor: "#2d6a4f",
         },
         embeddedWallets: {
           createOnLogin: "users-without-wallets",
