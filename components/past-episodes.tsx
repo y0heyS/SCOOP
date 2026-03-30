@@ -45,26 +45,26 @@ export function PastEpisodes() {
         <h2 className="text-xl font-bold text-foreground">過去のエピソード</h2>
         <Link 
           href="#" 
-          className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+          className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-foreground"
         >
           すべて見る
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3">
         {episodes.map((episode) => (
           <Link key={episode.id} href={`/predictions/${episode.id}`} className="block">
-            <Card className="cursor-pointer border-border bg-card p-5 transition-all hover:border-primary/40 hover:shadow-md">
+            <Card className="cursor-pointer border-white/20 bg-white/20 p-4 backdrop-blur-md transition-all hover:bg-white/30">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <Headphones className="h-6 w-6 text-primary" />
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/30">
+                  <Headphones className="h-5 w-5 text-foreground" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="mb-1 flex items-center gap-2">
-                    <span className="rounded-full bg-secondary px-2 py-0.5 text-xs font-medium text-secondary-foreground">
+                    <span className="rounded-full bg-white/30 px-2 py-0.5 text-xs font-medium text-foreground">
                       EP{episode.episode_number}
                     </span>
-                    <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                    <span className="flex items-center gap-1 text-xs text-foreground/70">
                       <Calendar className="h-3 w-3" />
                       {new Date(episode.published_at).toLocaleDateString("ja-JP", {
                         year: "numeric",
@@ -74,7 +74,7 @@ export function PastEpisodes() {
                     </span>
                   </div>
                   <h3 className="mb-1 truncate font-semibold text-foreground">{episode.title}</h3>
-                  <p className="line-clamp-2 text-sm text-muted-foreground">{episode.description}</p>
+                  <p className="line-clamp-2 text-sm text-foreground/70">{episode.description}</p>
                 </div>
               </div>
             </Card>

@@ -22,18 +22,18 @@ export function Header() {
 
   return (
     <>
-      <header className="border-b border-border bg-card">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <header className="relative z-20 bg-transparent">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <Mic className="h-5 w-5 text-primary-foreground" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+              <Mic className="h-5 w-5 text-foreground" />
             </div>
             <span className="text-lg font-bold text-foreground">ほろよいWEB3</span>
           </Link>
 
           <div className="flex items-center gap-2">
             <NotificationsDropdown />
-            <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground" onClick={handleWalletClick}>
+            <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground hover:bg-white/20" onClick={handleWalletClick}>
               <Wallet className="h-5 w-5" />
               <span className="sr-only">{authenticated ? "Connected Wallet" : "Connect Wallet"}</span>
             </Button>
