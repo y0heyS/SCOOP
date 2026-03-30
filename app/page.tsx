@@ -1,24 +1,22 @@
 import { PredictionForm } from "@/components/prediction-form"
 import { Header } from "@/components/header"
-import { TrumpTweets } from "@/components/trump-tweets"
+import { PastEpisodes } from "@/components/past-episodes"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      <div className="mx-auto max-w-5xl px-4 py-12 md:py-20">
+      <div className="mx-auto max-w-4xl px-4 py-12 md:py-20">
         {/* Title Section */}
-        <div className="mb-8 text-center md:mb-12">
-          <h1 className="mb-4 text-balance font-sans text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Predict Trump's Next Post on{" "}
-            <img
-              src="/images/x-logo.png"
-              alt="X"
-              className="inline-block h-10 w-10 -translate-y-1 align-bottom md:h-12 md:w-12 lg:h-16 lg:w-16"
-            />
+        <div className="mb-10 text-center md:mb-14">
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">
+            Podcast Title Prediction
+          </p>
+          <h1 className="mb-5 text-balance font-sans text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
+            ほろよいWEB3
           </h1>
-          <p className="mx-auto max-w-2xl text-pretty text-lg text-muted-foreground md:text-xl">
-            Submit your best guess. AI scores your prediction daily.
+          <p className="mx-auto max-w-xl text-pretty text-base text-muted-foreground md:text-lg">
+            次回エピソードのタイトルを予測しよう。AIが毎週あなたの予測を採点します。
           </p>
         </div>
 
@@ -28,7 +26,7 @@ export default function Home() {
         </div>
 
         <div className="mb-12">
-          <TrumpTweets />
+          <PastEpisodes />
         </div>
       </div>
     </main>

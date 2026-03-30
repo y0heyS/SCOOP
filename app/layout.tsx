@@ -8,8 +8,8 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
+  title: "ほろよいWEB3 | 次回タイトル予測",
+  description: "ほろよいWEB3 Podcastの次回エピソードタイトルを予測しよう。AIが毎週あなたの予測を採点します。",
   generator: "v0.app",
 }
 
