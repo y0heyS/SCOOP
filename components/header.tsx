@@ -1,4 +1,4 @@
-import { User, Trophy, History } from "lucide-react"
+import { User, Trophy, History, Bell } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -23,6 +23,12 @@ export function Header() {
             <Button variant="ghost" size="sm" className="gap-2 text-foreground hover:bg-white/20">
               <Trophy className="h-4 w-4" />
               <span>ランキング</span>
+            </Button>
+          </Link>
+          <Link href="/notifications">
+            <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground hover:bg-white/20">
+              <Bell className="h-5 w-5" />
+              <span className="sr-only">通知</span>
             </Button>
           </Link>
           <Link href="/mypage">
