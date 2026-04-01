@@ -28,10 +28,10 @@ export default function Home() {
         {/* Title Section */}
         <div className="mb-10 text-center md:mb-14">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-foreground/70">
-            Podcast Title Prediction
+            ほろよいWEB3
           </p>
           <h1 className="mb-5 text-balance font-sans text-4xl font-bold tracking-tight text-foreground drop-shadow-sm md:text-5xl lg:text-6xl">
-            ほろよいWEB3
+            Podcast Title Prediction
           </h1>
           <p className="mx-auto max-w-xl text-pretty text-base text-foreground/80 md:text-lg">
             次回エピソードのタイトルを予測しよう。AIが毎週あなたの予測を採点します。
