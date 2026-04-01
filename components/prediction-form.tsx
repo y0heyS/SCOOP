@@ -37,12 +37,12 @@ export function PredictionForm() {
           <Textarea
             value={prediction}
             onChange={(e) => setPrediction(e.target.value)}
-            maxLength={100}
+            maxLength={30}
             placeholder="例: Web3で変わる日本の未来..."
-            className="min-h-[100px] resize-none border-0 bg-transparent px-0 py-2 text-base text-foreground placeholder:text-foreground/50 focus-visible:ring-0 md:min-h-[120px] md:text-lg"
+            className="min-h-[60px] resize-none border-0 bg-transparent px-0 py-2 text-base text-foreground placeholder:text-foreground/50 focus-visible:ring-0 md:min-h-[70px] md:text-lg"
           />
-          <div className="mt-4 flex items-center justify-between gap-4 border-t border-white/20 pt-4">
-            <p className="text-sm text-foreground/70">{prediction.length} / 100 文字</p>
+          <div className="mt-3 flex items-center justify-between gap-4 border-t border-white/20 pt-3">
+            <p className="text-sm text-foreground/70">{prediction.length} / 30 文字</p>
             <Button
               type="submit"
               size="lg"
