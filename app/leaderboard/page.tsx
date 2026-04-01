@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Header } from "@/components/header"
 import { Bubbles } from "@/components/bubbles"
+import { BottomNav } from "@/components/bottom-nav"
 import { Trophy, Crown } from "lucide-react"
 
 // Sample leaderboard data
@@ -31,7 +32,7 @@ export default function LeaderboardPage() {
   const data = activeTab === "all" ? leaderboardData : roundData
 
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-amber-300 via-amber-400 to-amber-500">
+    <main className="relative min-h-screen bg-gradient-to-b from-amber-300 via-amber-400 to-amber-500 pb-20 md:pb-0">
       {/* Wave decoration at top */}
       <div className="absolute left-0 right-0 top-0 h-8 overflow-hidden">
         <svg
@@ -108,6 +109,8 @@ export default function LeaderboardPage() {
           ))}
         </div>
       </div>
+
+      <BottomNav />
     </main>
   )
 }

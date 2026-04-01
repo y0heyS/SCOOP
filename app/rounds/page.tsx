@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/header"
 import { Bubbles } from "@/components/bubbles"
+import { BottomNav } from "@/components/bottom-nav"
 import { Card } from "@/components/ui/card"
 import { Calendar, Users } from "lucide-react"
 import Link from "next/link"
@@ -84,7 +85,7 @@ const rounds = [
 
 export default function RoundsPage() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-amber-300 via-amber-400 to-amber-500">
+    <main className="relative min-h-screen bg-gradient-to-b from-amber-300 via-amber-400 to-amber-500 pb-20 md:pb-0">
       {/* Wave decoration at top */}
       <div className="absolute left-0 right-0 top-0 h-8 overflow-hidden">
         <svg
@@ -163,6 +164,8 @@ export default function RoundsPage() {
           ))}
         </div>
       </div>
+
+      <BottomNav />
     </main>
   )
 }
