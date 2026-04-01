@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Wallet, Mic, Trophy } from "lucide-react"
+import { Wallet, Mic, Trophy, History } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { usePrivy } from "@privy-io/react-auth"
 import { NotificationsDropdown } from "./notifications-dropdown"
@@ -32,6 +32,12 @@ export function Header() {
           </Link>
 
           <nav className="flex items-center gap-1">
+            <Link href="/rounds">
+              <Button variant="ghost" size="sm" className="gap-2 text-foreground hover:bg-white/20">
+                <History className="h-4 w-4" />
+                <span className="hidden sm:inline">過去ラウンド</span>
+              </Button>
+            </Link>
             <Link href="/leaderboard">
               <Button variant="ghost" size="sm" className="gap-2 text-foreground hover:bg-white/20">
                 <Trophy className="h-4 w-4" />
