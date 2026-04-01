@@ -12,24 +12,27 @@ interface BetModalProps {
   onSubmit: (amount: string) => void
 }
 
-const BET_AMOUNTS = ["1 USDC", "5 USDC", "もっと"]
+const MAX_POINTS = 1682
+const MIN_POINTS = 1
 
 export function BetModal({ open, onOpenChange, prediction, onSubmit }: BetModalProps) {
-  const [selectedAmount, setSelectedAmount] = useState<string>("")
+  const [betAmount, setBetAmount] = useState<number>(100)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleSubmit = () => {
-    if (selectedAmount) {
-      onSubmit(selectedAmount)
+    if (betAmount >= MIN_POINTS) {
+      onSubmit(`${betAmount}pt`)
       setIsSubmitted(true)
     }
   }
 
   const handleClose = () => {
-    setSelectedAmount("")
+    setBetAmount(100)
     setIsSubmitted(false)
     onOpenChange(false)
   }
+
+  const percentage = ((betAmount - MIN_POINTS) / (MAX_POINTS - MIN_POINTS)) * 100
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
@@ -71,28 +74,37 @@ export function BetModal({ open, onOpenChange, prediction, onSubmit }: BetModalP
                 類似度に応じて報酬が分配されます。
               </p>
 
-              <div className="space-y-3">
-                <label className="text-sm font-medium text-foreground">金額を選択</label>
-                <div className="grid grid-cols-3 gap-3">
-                  {BET_AMOUNTS.map((amount) => (
-                    <button
-                      key={amount}
-                      onClick={() => setSelectedAmount(amount)}
-                      className={`rounded-lg border px-4 py-3 text-center text-sm font-medium transition-colors ${
-                        selectedAmount === amount
-                          ? "border-primary bg-primary text-primary-foreground"
-                          : "border-border bg-card text-foreground hover:border-primary/40 hover:bg-secondary"
-                      }`}
-                    >
-                      {amount}
-                    </button>
-                  ))}
+              <div className="space-y-4">
+                <div className="text-base">
+                  <span className="text-foreground">賭けポイント: </span>
+                  <span className="font-bold text-emerald-400">{betAmount}pt</span>
+                </div>
+                
+                <div className="relative py-2">
+                  <input
+                    type="range"
+                    min={MIN_POINTS}
+                    max={MAX_POINTS}
+                    value={betAmount}
+                    onChange={(e) => setBetAmount(Number(e.target.value))}
+                    className="slider-input w-full cursor-pointer appearance-none bg-transparent"
+                    style={{
+                      background: `linear-gradient(to right, #34d399 0%, #34d399 ${percentage}%, rgba(255,255,255,0.3) ${percentage}%, rgba(255,255,255,0.3) 100%)`,
+                      height: '8px',
+                      borderRadius: '4px',
+                    }}
+                  />
+                </div>
+                
+                <div className="flex justify-between text-sm text-foreground/70">
+                  <span>{MIN_POINTS}pt</span>
+                  <span>保有: {MAX_POINTS}pt</span>
                 </div>
               </div>
 
               <Button
                 onClick={handleSubmit}
-                disabled={!selectedAmount}
+                disabled={betAmount < MIN_POINTS}
                 size="lg"
                 className="w-full bg-primary py-5 text-base text-primary-foreground hover:bg-primary/90 disabled:bg-muted disabled:text-muted-foreground"
               >
