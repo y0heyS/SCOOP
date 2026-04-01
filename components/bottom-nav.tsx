@@ -23,14 +23,14 @@ export function BottomNav() {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex flex-1 flex-col items-center gap-1 py-3 text-xs transition-colors ${
+              className={`flex flex-1 items-center justify-center py-4 transition-colors ${
                 isActive
                   ? "text-foreground"
                   : "text-foreground/60 hover:text-foreground"
               }`}
             >
-              <item.icon className={`h-5 w-5 ${isActive ? "text-foreground" : ""}`} />
-              <span className="font-medium">{item.label}</span>
+              <item.icon className={`h-6 w-6 ${isActive ? "text-foreground" : ""}`} />
+              <span className="sr-only">{item.label}</span>
             </Link>
           )
         })}

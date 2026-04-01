@@ -14,15 +14,15 @@ export function Header() {
         {/* Desktop Navigation - hidden on mobile */}
         <nav className="hidden items-center gap-1 md:flex">
           <Link href="/rounds">
-            <Button variant="ghost" size="sm" className="gap-2 text-foreground hover:bg-white/20">
-              <History className="h-4 w-4" />
-              <span>過去ラウンド</span>
+            <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground hover:bg-white/20">
+              <History className="h-5 w-5" />
+              <span className="sr-only">過去ラウンド</span>
             </Button>
           </Link>
           <Link href="/leaderboard">
-            <Button variant="ghost" size="sm" className="gap-2 text-foreground hover:bg-white/20">
-              <Trophy className="h-4 w-4" />
-              <span>ランキング</span>
+            <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground hover:bg-white/20">
+              <Trophy className="h-5 w-5" />
+              <span className="sr-only">ランキング</span>
             </Button>
           </Link>
           <Link href="/notifications">
