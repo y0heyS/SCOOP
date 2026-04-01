@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Wallet, Mic, Trophy, History } from "lucide-react"
+import { Wallet, Trophy, History } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { usePrivy } from "@privy-io/react-auth"
 import { NotificationsDropdown } from "./notifications-dropdown"
@@ -25,9 +25,7 @@ export function Header() {
       <header className="relative z-20 bg-transparent">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-              <Mic className="h-5 w-5 text-foreground" />
-            </div>
+            <span className="text-2xl" role="img" aria-label="乾杯">🍻</span>
             <span className="text-lg font-bold text-foreground">ほろよいWEB3</span>
           </Link>
 
