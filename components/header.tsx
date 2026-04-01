@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Wallet, Mic } from "lucide-react"
+import { Wallet, Mic, Trophy } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { usePrivy } from "@privy-io/react-auth"
 import { NotificationsDropdown } from "./notifications-dropdown"
@@ -31,13 +31,19 @@ export function Header() {
             <span className="text-lg font-bold text-foreground">ほろよいWEB3</span>
           </Link>
 
-          <div className="flex items-center gap-2">
+          <nav className="flex items-center gap-1">
+            <Link href="/leaderboard">
+              <Button variant="ghost" size="sm" className="gap-2 text-foreground hover:bg-white/20">
+                <Trophy className="h-4 w-4" />
+                <span className="hidden sm:inline">ランキング</span>
+              </Button>
+            </Link>
             <NotificationsDropdown />
             <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground hover:bg-white/20" onClick={handleWalletClick}>
               <Wallet className="h-5 w-5" />
               <span className="sr-only">{authenticated ? "Connected Wallet" : "Connect Wallet"}</span>
             </Button>
-          </div>
+          </nav>
         </div>
       </header>
 
