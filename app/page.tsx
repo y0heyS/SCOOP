@@ -3,6 +3,7 @@ import { Header } from "@/components/header"
 import { PastEpisodes } from "@/components/past-episodes"
 import { Bubbles } from "@/components/bubbles"
 import { BottomNav } from "@/components/bottom-nav"
+import { CountdownTimer } from "@/components/countdown-timer"
 
 export default function Home() {
   return (
@@ -42,6 +43,11 @@ export default function Home() {
           <p className="mx-auto max-w-xl text-pretty text-base text-stone-700 md:text-lg">
             次回エピソードのタイトルを予測しよう。AIが毎週あなたの予測を採点します。
           </p>
+        </div>
+
+        {/* Countdown Timer */}
+        <div className="mb-8">
+          <CountdownTimer />
         </div>
 
         {/* Prediction Form */}
