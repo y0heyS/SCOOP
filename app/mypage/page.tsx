@@ -89,7 +89,7 @@ export default function MyPage() {
 
       <Header />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-4 py-8">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 pt-20 pb-8 md:pt-24">
         {/* Points Card */}
         <Card className="mb-8 border-stone-300/30 bg-white/40 p-6 text-center backdrop-blur-md">
           <p className="mb-2 text-sm text-stone-600">保有ポイント</p>
