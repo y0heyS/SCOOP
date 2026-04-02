@@ -8,31 +8,31 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:py-4">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl md:text-2xl" role="img" aria-label="乾杯">🍻</span>
-          <span className="text-base font-bold text-foreground md:text-lg">ほろよいWEB3</span>
+          <span className="text-base font-bold text-stone-900 md:text-lg">ほろよいWEB3</span>
         </Link>
 
         {/* Desktop Navigation - hidden on mobile */}
         <nav className="hidden items-center gap-1 md:flex">
           <Link href="/rounds">
-            <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground hover:bg-white/20">
+            <Button variant="ghost" size="icon" className="h-10 w-10 text-stone-900 hover:bg-stone-900/10">
               <History className="h-5 w-5" />
               <span className="sr-only">過去ラウンド</span>
             </Button>
           </Link>
           <Link href="/leaderboard">
-            <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground hover:bg-white/20">
+            <Button variant="ghost" size="icon" className="h-10 w-10 text-stone-900 hover:bg-stone-900/10">
               <Trophy className="h-5 w-5" />
               <span className="sr-only">ランキング</span>
             </Button>
           </Link>
           <Link href="/notifications">
-            <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground hover:bg-white/20">
+            <Button variant="ghost" size="icon" className="h-10 w-10 text-stone-900 hover:bg-stone-900/10">
               <Bell className="h-5 w-5" />
               <span className="sr-only">通知</span>
             </Button>
           </Link>
           <Link href="/mypage">
-            <Button variant="ghost" size="icon" className="h-10 w-10 text-foreground hover:bg-white/20">
+            <Button variant="ghost" size="icon" className="h-10 w-10 text-stone-900 hover:bg-stone-900/10">
               <User className="h-5 w-5" />
               <span className="sr-only">マイページ</span>
             </Button>
