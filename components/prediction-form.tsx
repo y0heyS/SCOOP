@@ -47,7 +47,7 @@ export function PredictionForm() {
               type="submit"
               size="lg"
               disabled={!prediction.trim()}
-              className="rounded-full bg-white/30 px-8 text-foreground backdrop-blur-sm hover:bg-white/40 disabled:bg-white/10 disabled:text-foreground/40"
+              className="rounded-full bg-stone-900 px-8 text-white hover:bg-stone-800 disabled:bg-stone-400 disabled:text-stone-200"
             >
               予測を送信
             </Button>
