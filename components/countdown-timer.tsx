@@ -51,29 +51,24 @@ export function CountdownTimer() {
   }, [])
 
   const TimeBlock = ({ value, label }: { value: number; label: string }) => (
-    <div className="flex flex-col items-center">
-      <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-stone-900 md:h-16 md:w-16">
-        <span className="text-xl font-bold text-white md:text-2xl">
-          {value.toString().padStart(2, "0")}
-        </span>
-      </div>
-      <span className="mt-1 text-xs text-stone-600">{label}</span>
+    <div className="flex items-center gap-1">
+      <span className="w-7 rounded bg-stone-900 py-1 text-center text-sm font-bold text-white">
+        {value.toString().padStart(2, "0")}
+      </span>
+      <span className="text-xs text-stone-600">{label}</span>
     </div>
   )
 
   return (
-    <div className="rounded-2xl border border-stone-300/30 bg-white/40 p-5 backdrop-blur-md">
-      <div className="mb-4 flex items-center justify-center gap-2">
-        <Clock className="h-5 w-5 text-stone-900" />
-        <span className="font-medium text-stone-900">予測締切まで</span>
+    <div className="flex items-center justify-center gap-3 rounded-full border border-stone-300/30 bg-white/40 px-5 py-2.5 backdrop-blur-md">
+      <div className="flex items-center gap-1.5">
+        <Clock className="h-4 w-4 text-stone-700" />
+        <span className="text-sm font-medium text-stone-700">締切</span>
       </div>
-      <div className="flex items-center justify-center gap-2 md:gap-3">
+      <div className="flex items-center gap-1.5">
         <TimeBlock value={timeLeft.days} label="日" />
-        <span className="text-2xl font-bold text-stone-400">:</span>
-        <TimeBlock value={timeLeft.hours} label="時間" />
-        <span className="text-2xl font-bold text-stone-400">:</span>
+        <TimeBlock value={timeLeft.hours} label="時" />
         <TimeBlock value={timeLeft.minutes} label="分" />
-        <span className="text-2xl font-bold text-stone-400">:</span>
         <TimeBlock value={timeLeft.seconds} label="秒" />
       </div>
     </div>
