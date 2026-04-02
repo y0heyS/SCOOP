@@ -60,19 +60,19 @@ export default function LeaderboardPage() {
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-12 md:py-16">
         {/* Title Section */}
         <div className="mb-8 flex items-center gap-3">
-          <Trophy className="h-8 w-8 text-foreground" />
-          <h1 className="text-3xl font-bold text-foreground md:text-4xl">ランキング</h1>
+          <Trophy className="h-8 w-8 text-stone-900" />
+          <h1 className="text-3xl font-bold text-stone-900 md:text-4xl">ランキング</h1>
         </div>
 
         {/* Tab Switcher */}
         <div className="mb-6">
-          <div className="inline-flex rounded-full bg-white/20 p-1 backdrop-blur-sm">
+          <div className="inline-flex rounded-full bg-stone-900/10 p-1 backdrop-blur-sm">
             <button
               onClick={() => setActiveTab("all")}
               className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${
                 activeTab === "all"
-                  ? "bg-white/30 text-foreground"
-                  : "text-foreground/70 hover:text-foreground"
+                  ? "bg-stone-900 text-white"
+                  : "text-stone-700 hover:text-stone-900"
               }`}
             >
               全期間
@@ -81,8 +81,8 @@ export default function LeaderboardPage() {
               onClick={() => setActiveTab("round")}
               className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${
                 activeTab === "round"
-                  ? "bg-white/30 text-foreground"
-                  : "text-foreground/70 hover:text-foreground"
+                  ? "bg-stone-900 text-white"
+                  : "text-stone-700 hover:text-stone-900"
               }`}
             >
               ラウンド別
@@ -95,19 +95,19 @@ export default function LeaderboardPage() {
           {data.map((user) => (
             <div
               key={user.id}
-              className="flex items-center justify-between rounded-2xl border border-white/20 bg-white/20 px-5 py-4 backdrop-blur-md transition-all hover:bg-white/30"
+              className="flex items-center justify-between rounded-2xl border border-stone-300/30 bg-white/40 px-5 py-4 backdrop-blur-md transition-all hover:bg-white/60"
             >
               <div className="flex items-center gap-4">
                 <div className="flex h-10 w-10 items-center justify-center">
                   {user.rank === 1 ? (
-                    <Crown className="h-6 w-6 text-white" />
+                    <Crown className="h-6 w-6 text-stone-900" />
                   ) : (
-                    <span className="text-lg font-bold text-foreground/70">{user.rank}</span>
+                    <span className="text-lg font-bold text-stone-500">{user.rank}</span>
                   )}
                 </div>
-                <span className="font-medium text-foreground">{user.name}</span>
+                <span className="font-medium text-stone-900">{user.name}</span>
               </div>
-              <span className="text-lg font-bold text-white drop-shadow-sm">
+              <span className="text-lg font-bold text-stone-900">
                 {user.points.toLocaleString()}pt
               </span>
             </div>

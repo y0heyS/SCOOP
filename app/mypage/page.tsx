@@ -91,37 +91,37 @@ export default function MyPage() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-8">
         {/* Points Card */}
-        <Card className="mb-8 border-white/20 bg-white/20 p-6 text-center backdrop-blur-md">
-          <p className="mb-2 text-sm text-foreground/70">保有ポイント</p>
+        <Card className="mb-8 border-stone-300/30 bg-white/40 p-6 text-center backdrop-blur-md">
+          <p className="mb-2 text-sm text-stone-600">保有ポイント</p>
           <div className="flex items-center justify-center gap-2">
-            <Coins className="h-8 w-8 text-white" />
-            <span className="text-5xl font-bold text-white drop-shadow-sm">{totalPoints.toLocaleString()}</span>
-            <span className="text-2xl text-foreground">pt</span>
+            <Coins className="h-8 w-8 text-stone-900" />
+            <span className="text-5xl font-bold text-stone-900">{totalPoints.toLocaleString()}</span>
+            <span className="text-2xl text-stone-700">pt</span>
           </div>
         </Card>
 
         {/* Participation History */}
         <section className="mb-8">
           <div className="mb-4 flex items-center gap-2">
-            <BarChart3 className="h-5 w-5 text-foreground" />
-            <h2 className="text-lg font-bold text-foreground">参加履歴</h2>
+            <BarChart3 className="h-5 w-5 text-stone-900" />
+            <h2 className="text-lg font-bold text-stone-900">参加履歴</h2>
           </div>
           <div className="space-y-3">
             {participationHistory.map((item) => (
               <Card
                 key={item.id}
-                className="border-white/20 bg-white/20 p-4 backdrop-blur-md"
+                className="border-stone-300/30 bg-white/40 p-4 backdrop-blur-md"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="min-w-0 flex-1">
-                    <h3 className="mb-1 font-semibold text-foreground">
+                    <h3 className="mb-1 font-semibold text-stone-900">
                       {item.roundNumber && `#${item.roundNumber}　`}
                       {item.title}
                     </h3>
-                    <p className="text-sm text-foreground/70">
+                    <p className="text-sm text-stone-600">
                       予測: {item.prediction}
                     </p>
-                    <p className="text-sm text-foreground/70">
+                    <p className="text-sm text-stone-600">
                       ベット: {item.betAmount}pt →{" "}
                       {item.status === "pending" ? (
                         <span>結果待ち</span>
@@ -131,7 +131,7 @@ export default function MyPage() {
                     </p>
                   </div>
                   {item.score !== null && (
-                    <span className="shrink-0 text-lg font-bold text-white drop-shadow-sm">
+                    <span className="shrink-0 text-lg font-bold text-stone-900">
                       {item.score.toFixed(1)}%
                     </span>
                   )}
@@ -144,21 +144,21 @@ export default function MyPage() {
         {/* Point History */}
         <section>
           <div className="mb-4 flex items-center gap-2">
-            <Clock className="h-5 w-5 text-foreground" />
-            <h2 className="text-lg font-bold text-foreground">ポイント収支</h2>
+            <Clock className="h-5 w-5 text-stone-900" />
+            <h2 className="text-lg font-bold text-stone-900">ポイント収支</h2>
           </div>
           <div className="space-y-3">
             {pointHistory.map((item) => (
               <Card
                 key={item.id}
-                className="border-white/20 bg-white/20 p-4 backdrop-blur-md"
+                className="border-stone-300/30 bg-white/40 p-4 backdrop-blur-md"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold text-foreground">{item.type}</h3>
-                    <p className="text-sm text-foreground/70">{item.date}</p>
+                    <h3 className="font-semibold text-stone-900">{item.type}</h3>
+                    <p className="text-sm text-stone-600">{item.date}</p>
                   </div>
-                  <span className="text-lg font-bold text-white drop-shadow-sm">
+                  <span className="text-lg font-bold text-stone-900">
                     +{item.amount}pt
                   </span>
                 </div>

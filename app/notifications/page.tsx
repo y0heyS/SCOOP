@@ -76,8 +76,8 @@ export default function NotificationsPage() {
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-8 md:py-12">
         {/* Title */}
         <div className="mb-6 flex items-center gap-3">
-          <Bell className="h-6 w-6 text-foreground md:h-8 md:w-8" />
-          <h1 className="text-2xl font-bold text-foreground md:text-3xl">通知</h1>
+          <Bell className="h-6 w-6 text-stone-900 md:h-8 md:w-8" />
+          <h1 className="text-2xl font-bold text-stone-900 md:text-3xl">通知</h1>
         </div>
 
         {/* Notifications List */}
@@ -85,27 +85,27 @@ export default function NotificationsPage() {
           {notifications.map((notification) => (
             <Card
               key={notification.id}
-              className={`border-white/20 p-4 backdrop-blur-md transition-all ${
+              className={`border-stone-300/30 p-4 backdrop-blur-md transition-all ${
                 notification.read
-                  ? "bg-white/10"
-                  : "bg-white/25"
+                  ? "bg-white/30"
+                  : "bg-white/50"
               }`}
             >
               <div className="flex items-start gap-3">
                 <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
-                  notification.read ? "bg-white/20" : "bg-white/30"
+                  notification.read ? "bg-stone-900/10" : "bg-stone-900/15"
                 }`}>
-                  <notification.icon className="h-5 w-5 text-foreground" />
+                  <notification.icon className="h-5 w-5 text-stone-900" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="mb-1 flex items-center gap-2">
-                    <h3 className="font-semibold text-foreground">{notification.title}</h3>
+                    <h3 className="font-semibold text-stone-900">{notification.title}</h3>
                     {!notification.read && (
-                      <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                      <span className="h-2 w-2 rounded-full bg-stone-900" />
                     )}
                   </div>
-                  <p className="mb-1 text-sm text-foreground/80">{notification.message}</p>
-                  <p className="text-xs text-foreground/60">{notification.date}</p>
+                  <p className="mb-1 text-sm text-stone-700">{notification.message}</p>
+                  <p className="text-xs text-stone-500">{notification.date}</p>
                 </div>
               </div>
             </Card>
@@ -114,8 +114,8 @@ export default function NotificationsPage() {
 
         {notifications.length === 0 && (
           <div className="py-12 text-center">
-            <Bell className="mx-auto mb-4 h-12 w-12 text-foreground/40" />
-            <p className="text-foreground/60">通知はありません</p>
+            <Bell className="mx-auto mb-4 h-12 w-12 text-stone-400" />
+            <p className="text-stone-500">通知はありません</p>
           </div>
         )}
       </div>

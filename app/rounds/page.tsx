@@ -112,7 +112,7 @@ export default function RoundsPage() {
       
       <div className="relative z-10 mx-auto max-w-5xl px-4 py-8 md:py-12">
         {/* Title */}
-        <h1 className="mb-8 text-2xl font-bold text-foreground md:text-3xl">
+        <h1 className="mb-8 text-2xl font-bold text-stone-900 md:text-3xl">
           過去ラウンド一覧
         </h1>
 
@@ -120,30 +120,30 @@ export default function RoundsPage() {
         <div className="grid gap-4 md:grid-cols-2">
           {rounds.map((round) => (
             <Link key={round.id} href={`/rounds/${round.id}`}>
-              <Card className="cursor-pointer border-white/20 bg-white/20 p-5 backdrop-blur-md transition-all hover:bg-white/30">
+              <Card className="cursor-pointer border-stone-300/30 bg-white/40 p-5 backdrop-blur-md transition-all hover:bg-white/60">
                 <div className="flex items-start justify-between gap-4">
                   <div className="min-w-0 flex-1">
                     {/* Status Badge */}
                     <div className="mb-2">
                       {round.status === "confirmed" ? (
-                        <span className="inline-flex rounded-full bg-white/30 px-2.5 py-0.5 text-xs font-medium text-foreground">
+                        <span className="inline-flex rounded-full bg-stone-900/10 px-2.5 py-0.5 text-xs font-medium text-stone-900">
                           確定
                         </span>
                       ) : (
-                        <span className="inline-flex rounded-full bg-white/50 px-2.5 py-0.5 text-xs font-medium text-amber-900">
+                        <span className="inline-flex rounded-full bg-stone-900 px-2.5 py-0.5 text-xs font-medium text-white">
                           受付中
                         </span>
                       )}
                     </div>
 
                     {/* Title */}
-                    <h3 className="mb-2 font-semibold text-foreground">
+                    <h3 className="mb-2 font-semibold text-stone-900">
                       {round.number ? `#${round.number}　` : ""}
                       {round.title}
                     </h3>
 
                     {/* Meta info */}
-                    <div className="flex items-center gap-4 text-sm text-foreground/70">
+                    <div className="flex items-center gap-4 text-sm text-stone-600">
                       <span className="flex items-center gap-1">
                         <Calendar className="h-3.5 w-3.5" />
                         {round.date}
@@ -158,7 +158,7 @@ export default function RoundsPage() {
                   {/* Score */}
                   {round.score !== null && (
                     <div className="shrink-0 text-right">
-                      <span className="text-lg font-bold text-white drop-shadow-sm">
+                      <span className="text-lg font-bold text-stone-900">
                         {round.score.toFixed(1)}%
                       </span>
                     </div>
