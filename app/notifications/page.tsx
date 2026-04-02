@@ -51,17 +51,17 @@ export default function NotificationsPage() {
     <main className="relative min-h-screen bg-gradient-to-b from-amber-300 via-amber-400 to-amber-500 pb-20 md:pb-0">
       {/* Beer foam at top */}
       <div className="absolute left-0 right-0 top-0 z-0">
-        <div className="h-20 bg-white md:h-24" />
+        <div className="h-12 bg-white md:h-14" />
         <svg
-          viewBox="0 0 1200 80"
+          viewBox="0 0 1200 60"
           preserveAspectRatio="none"
-          className="h-12 w-full md:h-16"
+          className="h-8 w-full md:h-10"
         >
           <path
             d="M0,0 
-               C100,40 200,60 350,35 
-               C500,10 600,50 750,40 
-               C900,30 1000,60 1200,25 
+               C100,30 200,45 350,25 
+               C500,5 600,35 750,28 
+               C900,20 1000,45 1200,18 
                L1200,0 L0,0 Z"
             fill="white"
           />
