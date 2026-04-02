@@ -65,16 +65,31 @@ export default function MyPage() {
 
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-amber-300 via-amber-400 to-amber-500 pb-20 md:pb-0">
-      {/* Wave decoration at top */}
-      <div className="absolute left-0 right-0 top-0 h-8 overflow-hidden">
+      {/* Beer foam at top */}
+      <div className="absolute left-0 right-0 top-0 z-0">
+        <div className="h-16 bg-gradient-to-b from-white to-amber-50 md:h-20" />
         <svg
-          viewBox="0 0 1200 40"
+          viewBox="0 0 1200 60"
           preserveAspectRatio="none"
-          className="h-full w-full"
+          className="h-10 w-full md:h-14"
         >
           <path
-            d="M0,20 Q150,0 300,20 T600,20 T900,20 T1200,20 L1200,0 L0,0 Z"
-            fill="rgba(255,255,255,0.3)"
+            d="M0,0 
+               C100,30 200,50 300,30 
+               C400,10 500,40 600,30 
+               C700,20 800,50 900,25 
+               C1000,0 1100,35 1200,20 
+               L1200,0 L0,0 Z"
+            fill="white"
+          />
+          <path
+            d="M0,5 
+               C150,40 250,15 400,35 
+               C550,55 650,20 800,40 
+               C950,60 1050,25 1200,30 
+               L1200,0 L0,0 Z"
+            fill="#fffbeb"
+            opacity="0.8"
           />
         </svg>
       </div>
