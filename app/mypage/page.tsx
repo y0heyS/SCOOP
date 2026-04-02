@@ -89,8 +89,8 @@ export default function MyPage() {
         <Card className="mb-8 border-white/20 bg-white/20 p-6 text-center backdrop-blur-md">
           <p className="mb-2 text-sm text-foreground/70">保有ポイント</p>
           <div className="flex items-center justify-center gap-2">
-            <Coins className="h-8 w-8 text-emerald-400" />
-            <span className="text-5xl font-bold text-emerald-400">{totalPoints.toLocaleString()}</span>
+            <Coins className="h-8 w-8 text-white" />
+            <span className="text-5xl font-bold text-white drop-shadow-sm">{totalPoints.toLocaleString()}</span>
             <span className="text-2xl text-foreground">pt</span>
           </div>
         </Card>
@@ -126,7 +126,7 @@ export default function MyPage() {
                     </p>
                   </div>
                   {item.score !== null && (
-                    <span className="shrink-0 text-lg font-bold text-emerald-400">
+                    <span className="shrink-0 text-lg font-bold text-white drop-shadow-sm">
                       {item.score.toFixed(1)}%
                     </span>
                   )}
@@ -153,7 +153,7 @@ export default function MyPage() {
                     <h3 className="font-semibold text-foreground">{item.type}</h3>
                     <p className="text-sm text-foreground/70">{item.date}</p>
                   </div>
-                  <span className="text-lg font-bold text-emerald-400">
+                  <span className="text-lg font-bold text-white drop-shadow-sm">
                     +{item.amount}pt
                   </span>
                 </div>

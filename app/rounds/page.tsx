@@ -125,7 +125,7 @@ export default function RoundsPage() {
                           確定
                         </span>
                       ) : (
-                        <span className="inline-flex rounded-full bg-emerald-500/80 px-2.5 py-0.5 text-xs font-medium text-white">
+                        <span className="inline-flex rounded-full bg-white/50 px-2.5 py-0.5 text-xs font-medium text-amber-900">
                           受付中
                         </span>
                       )}
@@ -153,7 +153,7 @@ export default function RoundsPage() {
                   {/* Score */}
                   {round.score !== null && (
                     <div className="shrink-0 text-right">
-                      <span className="text-lg font-bold text-emerald-400">
+                      <span className="text-lg font-bold text-white drop-shadow-sm">
                         {round.score.toFixed(1)}%
                       </span>
                     </div>

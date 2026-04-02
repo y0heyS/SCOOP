@@ -77,7 +77,7 @@ export function BetModal({ open, onOpenChange, prediction, onSubmit }: BetModalP
               <div className="space-y-4">
                 <div className="text-base">
                   <span className="text-foreground">賭けポイント: </span>
-                  <span className="font-bold text-emerald-400">{betAmount}pt</span>
+                  <span className="font-bold text-amber-800">{betAmount}pt</span>
                 </div>
                 
                 <div className="relative py-2">
@@ -89,7 +89,7 @@ export function BetModal({ open, onOpenChange, prediction, onSubmit }: BetModalP
                     onChange={(e) => setBetAmount(Number(e.target.value))}
                     className="slider-input w-full cursor-pointer appearance-none bg-transparent"
                     style={{
-                      background: `linear-gradient(to right, #34d399 0%, #34d399 ${percentage}%, rgba(255,255,255,0.3) ${percentage}%, rgba(255,255,255,0.3) 100%)`,
+                      background: `linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) ${percentage}%, rgba(255,255,255,0.3) ${percentage}%, rgba(255,255,255,0.3) 100%)`,
                       height: '8px',
                       borderRadius: '4px',
                     }}

@@ -95,14 +95,14 @@ export default function LeaderboardPage() {
               <div className="flex items-center gap-4">
                 <div className="flex h-10 w-10 items-center justify-center">
                   {user.rank === 1 ? (
-                    <Crown className="h-6 w-6 text-emerald-400" />
+                    <Crown className="h-6 w-6 text-white" />
                   ) : (
                     <span className="text-lg font-bold text-foreground/70">{user.rank}</span>
                   )}
                 </div>
                 <span className="font-medium text-foreground">{user.name}</span>
               </div>
-              <span className="text-lg font-bold text-emerald-400">
+              <span className="text-lg font-bold text-white drop-shadow-sm">
                 {user.points.toLocaleString()}pt
               </span>
             </div>
